@@ -1,0 +1,157 @@
+{% extends 'base.html'%}
+{% block title %}{%endblock title%}
+{% block body %}
+<style>
+    body {
+    background: grey;
+}
+
+.form-control:focus {
+    box-shadow: 50px;
+    border-color: #BA68C8
+}
+
+.profile-button {
+    background: rgb(99, 39, 120);
+    box-shadow: 50px;
+    border: none
+}
+
+.profile-button:hover {
+    background: #682773
+}
+h4,.hometext{
+    text-align: center;
+    border: 1px solid black;
+}
+</style>
+<form method="post" action="/">
+    {% csrf_token %}
+<div class="container rounded bg-white mt-4 mb-5">
+    <br>
+    <p class="hometext">CAR FIX<br>
+    Khasra No. 277/2/2, Dherara, Opp. Rastradeep Hotel, Nagla Paramsukh<br>
+    Firozabad Road, Etmadpur, Agra-283202</p>
+        <p class="text-center">DEMANDED REPAIRS & JOB INSTRUCTIONS CAPTURING SHEET</p>
+    <form>
+                        <!-- Form Group (username)-->
+                        <div class="mb-3">
+                            <label class="small mb-1" for="username">Username (how your name will appear to other users on the site)</label>
+                            <input class="form-control" id="username" type="text" name="username" placeholder="Enter your username">
+                        </div>
+                        <!-- Form Row-->
+                        <div class="row gx-3 mb-3">
+                            <!-- Form Group (first name)-->
+                            <div class="col-md-6">
+                                <label class="small mb-1" for="email">Email</label>
+                                <input class="form-control" id="email" name="email" type="email" placeholder="Enter your email" >
+                            </div>
+                            <!-- Form Group (last name)-->
+                            <div class="col-md-6">
+                                <label class="small mb-1" for="registration">Registration Number</label>
+                                <input class="form-control" id="registration" name="registration" type="text" placeholder="Enter your registration number">
+                            </div>
+                        </div>
+                        <!-- Form Row        -->
+                        <div class="row gx-3 mb-3">
+                            <!-- Form Group (organization name)-->
+                            <div class="col-md-6">
+                                <label class="small mb-1" for="phone">Phone Number</label>
+                                <input class="form-control" id="phone" type="text" name="phone" placeholder="Enter your phone number">
+                            </div>
+                            <!-- Form Group (location)-->
+                            <div class="col-md-6">
+                                <label class="small mb-1" for="car_meter">Car Meter</label>
+                                <input class="form-control" id="car_meter" type="text" name="car_meter" placeholder="Enter your car meter">
+                            </div>
+                            <!-- Form Group (location)-->
+                            <div class="col-md-6">
+                                <label class="small mb-1" for="model">Car Model</label>
+                                <input class="form-control" id="model" type="text" name="model" placeholder="Enter your car model">
+                            </div>
+                            <!-- Form Group (location)-->
+                            <div class="col-md-6">
+                                <label class="small mb-1" for="vin">Vin No..</label>
+                                <input class="form-control" id="vin" type="text" name="vin" placeholder="Enter your vin number">
+                            </div>
+                        </div>
+                        <!-- Form Group (email address)-->
+                        <div class="mb-3">
+                            <label class="small mb-1" for="address">Address</label>
+                            <input class="form-control" id="address" type="text" name="address" placeholder="Enter your address">
+                        </div>
+                        <!-- Form Row-->
+                        <h4>PARTS</h4>
+<!--                        {% comment %} <h4 class="text-right">LABOUR</h4> {% endcomment %}-->
+                        <div class="row gx-3 mb-3">
+                            <!-- Form Group (phone number)-->
+                            <div class="col-md-6">
+                                <label class="small mb-1" for="engine_tune">Engine Tune</label>
+                                <input class="form-control" id="engine_tune" type="text" name="engine_tune" placeholder="Car engine checkup">
+                            </div>
+                            <!-- Form Group (birthday)-->
+                            <div class="col-md-6">
+                                <label class="small mb-1" for="engine_filter">Engine Oil Filter</label>
+                                <input class="form-control" id="engine_filter" type="text" name="engine_filter" placeholder="Car engine_filter">
+                            </div>
+                            <!-- Form Group (birthday)-->
+                            <div class="col-md-6">
+                                <label class="small mb-1" for="air_filter">Air Filter</label>
+                                <input class="form-control" id="air_filter" type="text" name="air_filter" placeholder="Car air_filter">
+                            </div>
+                            <!-- Form Group (birthday)-->
+                            <div class="col-md-6">
+                                <label class="small mb-1" for="spark_plug">Spark Plug</label>
+                                <input class="form-control" id="spark_plug" type="text" name="spark_plug" placeholder="Car birthday">
+                            </div>
+                            <!-- Form Group (birthday)-->
+                            <div class="col-md-6">
+                                <label class="small mb-1" for="fuel_filter">Fuel Filter</label>
+                                <input class="form-control" id="fuel_filter" type="text" name="fuel_filter" placeholder="Car fuel_filter">
+                            </div>
+                            <!-- Form Group (birthday)-->
+                            <div class="col-md-6">
+                                <label class="small mb-1" for="injector">Injector Cleaning</label>
+                                <input class="form-control" id="injector" type="text" name="injector" placeholder="Car injector">
+                            </div>
+                            <!-- Form Group (birthday)-->
+                            <div class="col-md-6">
+                                <label class="small mb-1" for="throttle_body">Throttle body</label>
+                                <input class="form-control" id="throttle_body" type="text" name="throttle_body" placeholder="Car throttle">
+                            </div>
+                            <!-- Form Group (birthday)-->
+                            <div class="col-md-6">
+                                <label class="small mb-1" for="balancing">Wheel balancing</label>
+                                <input class="form-control" id="balancing" type="text" name="balancing" placeholder="Car wheel_balancing">
+                            </div>
+                            <!-- Form Group (birthday)-->
+                            <div class="col-md-6">
+                                <label class="small mb-1" for="alignment">Wheel Alignment</label>
+                                <input class="form-control" id="alignment" type="text" name="alignment" placeholder="Car wheel_alignment">
+                            </div>
+                            <!-- Form Group (birthday)-->
+                            <div class="col-md-6">
+                                <label class="small mb-1" for="tyre_rotation">Tyre Rotation</label>
+                                <input class="form-control" id="tyre_rotation" type="text" name="tyre_rotation" placeholder="Car tyre_rotation">
+                            </div>
+                            <!-- Form Group (birthday)-->
+                            <div class="col-md-6">
+                                <label class="small mb-1" for="gear_oil">Gear Oil</label>
+                                <input class="form-control" id="gear_oil" type="text" name="gear_oil" placeholder="Car gear_oil">
+                            </div>
+                            <!-- Form Group (birthday)-->
+                            <div class="col-md-6">
+                                <label class="small mb-1" for="coolant">Coolant</label>
+                                <input class="form-control" id="coolant" type="text" name="coolant" placeholder="Car coolant">
+                            </div>
+<!--                        </div>-->
+        <div class="col-md-7 border-left">
+            <div class="p-0 py-2">
+                <div class="d-flex justify-content-between align-items-center mb-8"></div>
+</div>
+</div>
+</div>
+        <div class="py-2 mt-1 text-center"><button class="btn btn-primary" type="submit">Submit</button></div>
+</div>
+    </form>
+{% endblock body %}
